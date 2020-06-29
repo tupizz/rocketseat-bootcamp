@@ -1,5 +1,8 @@
+import 'reflect-metadata';
+
 import express from 'express';
 import bodyParser from 'body-parser';
+import './database';
 
 import routes from './routes';
 
