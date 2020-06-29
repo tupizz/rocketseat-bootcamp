@@ -10,6 +10,7 @@ appointmentRouter.post('/', async (request, response) => {
 
     const userService = new CreateUserService();
     const user = await userService.execute({ email, name, password });
+    delete user.password;
 
     return response.json(user);
   } catch (error) {
