@@ -1,0 +1,3 @@
+[submodule "gostack-template-typeorm-upload"]
+	path = gostack-template-typeorm-upload
+	url = https://github.com/tupizz/gostack-template-typeorm-upload.git
