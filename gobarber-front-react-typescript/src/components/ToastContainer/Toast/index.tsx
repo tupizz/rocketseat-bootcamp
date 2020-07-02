@@ -11,6 +11,7 @@ import { ToastMessage, useToast } from '../../../context/ToastContextProvider';
 
 interface ToastProps {
   message: ToastMessage;
+  style: object;
 }
 
 const mapIcons = {
@@ -19,7 +20,7 @@ const mapIcons = {
   error: <FiAlertCircle size={20} />,
 };
 
-const Toast: React.FC<ToastProps> = ({ message }) => {
+const Toast: React.FC<ToastProps> = ({ message, style }) => {
   const { removeToast } = useToast();
 
   useEffect(() => {
@@ -31,7 +32,11 @@ const Toast: React.FC<ToastProps> = ({ message }) => {
   }, [message.id, removeToast]);
 
   return (
-    <Container hasDescription={!!message.description} type={message.type}>
+    <Container
+      hasDescription={!!message.description}
+      type={message.type}
+      style={style}
+    >
       {mapIcons[message.type || 'info']}
 
       <div>
