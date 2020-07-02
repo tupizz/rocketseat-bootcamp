@@ -29,6 +29,7 @@ export default createGlobalStyle`
   }
 
   button {
+    font-family: 'Roboto Slab', serif;
     cursor: pointer;
   }
 `;
